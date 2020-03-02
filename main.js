@@ -6,12 +6,13 @@ class Main {
         this.fecha = new FechaNacimiento(3, 3, 2005)
     }
 
+
     testFechaNacimiento() {
         //lectura del atributo fecha
-        console.log(this.fecha.fecha)
+        console.log(this.fecha.getFecha())
 
         //escritura del atributo fecha
-        this.fecha.fecha = new Date ( 2007, 5, 2)
+        this.fecha.setFecha(new Date ( 2007, 5, 2))
 
         //Accceso a los metodos
         console.log(this.fecha.getFormatoCorto())

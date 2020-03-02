@@ -30,20 +30,38 @@ export default class FechaNacimiento {
      * @param {*} año año de la fecha de nacimiento
      */
     constructor(dia, mes, año){
-        this.fecha = new Date (año, mes - 1 , dia)
+        this._fecha = new Date (año, mes - 1 , dia)
        
     }
+    
+      /**
+     * Metodo de acceso de lectura para el atributo fecha
+     */
+
+    getFecha(){
+        return this._fecha
+    }
+
+    /**
+     * 
+     * @param {Date} fecha 
+     */
+    setFecha(fecha){
+        this._fecha = fecha
+    }
+    
+
     getFormatoCorto(){
-        return `${this.fecha.getDate()}/${this.fecha.getMonth()+1}/${this.fecha.getFullYear()}`
+        return `${this._fecha.getDate()}/${this._fecha.getMonth()+1}/${this._fecha.getFullYear()}`
         
     }
     getFormatoExtendido(){
-        let dia = diaSemana[this.fecha.getDay()]
-        let mes = nombreMes[this.fecha.getMonth()]
-        return `${dia} ${this.fecha.getDate()} de ${mes} ${this.fecha.getFullYear()}`
+        let dia = diaSemana[this._fecha.getDay()]
+        let mes = nombreMes[this._fecha.getMonth()]
+        return `${dia} ${this._fecha.getDate()} de ${mes} ${this._fecha.getFullYear()}`
     }
     getEdad(){
-        let difMSeg =Date.now() - this.fecha
+        let difMSeg =Date.now() - this._fecha
         let mSegAño = 1000 * 60 * 60 * 24 * 365
         let edad = Math.trunc(difMSeg / mSegAño)
         return `Edad: ${edad}` 
