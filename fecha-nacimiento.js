@@ -33,7 +33,7 @@ export default class FechaNacimiento {
         this._fecha = new Date (año, mes - 1 , dia)
        
     }
-    
+
       /**
      * Metodo de acceso de lectura para el atributo fecha
      */
@@ -47,7 +47,11 @@ export default class FechaNacimiento {
      * @param {Date} fecha 
      */
     setFecha(fecha){
-        this._fecha = fecha
+        if (fecha <= Date.now()){
+            this._fecha = fecha
+            return true
+        }
+        return false
     }
     
 

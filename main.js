@@ -12,7 +12,11 @@ class Main {
         console.log(this.fecha.getFecha())
 
         //escritura del atributo fecha
-        this.fecha.setFecha(new Date ( 2007, 5, 2))
+        console.log(this.fecha.setFecha(new Date ( 2207, 5, 2)))
+        console.log(this.fecha.getFormatoExtendido())
+
+        console.log(this.fecha.setFecha(new Date ( 2007, 5, 2)))
+        console.log(this.fecha.getFormatoExtendido())
 
         //Accceso a los metodos
         console.log(this.fecha.getFormatoCorto())
