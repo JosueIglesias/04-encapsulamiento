@@ -43,7 +43,7 @@ export default class FechaNacimiento {
     }
 
     /**
-     * 
+     * Metodo de acceso de escritura para el atributo fecha
      * @param {Date} fecha 
      */
     setFecha(fecha){
