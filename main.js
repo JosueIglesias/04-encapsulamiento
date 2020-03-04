@@ -1,4 +1,5 @@
 import FechaNacimiento from "./fecha-nacimiento.js"
+import Persona from "./persona.js"
 
 class Main {
 
