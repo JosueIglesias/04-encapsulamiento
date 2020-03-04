@@ -1,11 +1,17 @@
 export default class Persona {
-    constructor(genero, fechaNacimiento, nombre){
+    /**
+     * 
+     * @param {Nombre} nombre 
+     * @param {FechaNacimiento} fechaNacimiento 
+     * @param {string} genero 
+     */
+    constructor(nombre, fechaNacimiento, genero){
+        this._nombre = nombre
+        this._fechaNacimiento = fechaNacimiento 
         this._genero = genero 
-        this._fechaNacimiento = fechaNacimiento
-        this._nombre = nombre 
     }
 
     getPerfil(){
-        return `${this._genero} ${this._fechaNacimiento} ${this._nombre}`
+        return `${this._genero} ${this._fechaNacimiento.getFormatoCorto()} ${this._nombre.getNombreComplet()}`
     }
 }
