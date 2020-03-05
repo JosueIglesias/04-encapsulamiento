@@ -1,5 +1,4 @@
-export default Nombre
-class Nombre {
+export default class Nombre {
     constructor(nombre, apellidoPat, apellidoMat){
         this._nombre = nombre.toUpperCase()
         this._apellidoPat = apellidoPat.toUpperCase()
