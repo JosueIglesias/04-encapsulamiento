@@ -7,15 +7,14 @@ export default class Estudiante extends Persona {
         this._escuela = escuela
     }
 
-    getPerfil(){
-        return`${this._numeroCuenta} ${this._nombre.getCompleto()}`
+    getPerfilEstudiante(){
+        console.log(this._numeroCuenta)
+        console.log(this._nombre.getCompleto())
+        console.log(this._genero)
     }
 
     print(){
-        console.log(this._nombre.getCompleto())
-        //console.log(this.fechaNacimiento.getCompleto())
-        //console.log(this._nombre.getCompleto())
-        console.log(this._numeroCuenta)
+        console.log(this._fechaNacimiento.getFormatoCorto())
         console.log(this._correo)
         console.log(this._escuela)
     }

@@ -20,7 +20,7 @@ class Main {
             20166483,
             "jiglesias3@ucol.mx",
             "Facultad de Telemática")
-
+        e.getPerfilEstudiante()
         e.print()
     }
 
