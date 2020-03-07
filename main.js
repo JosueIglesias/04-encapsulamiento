@@ -12,6 +12,7 @@ class Main {
     }
 
     testEstudiante(){
+        console.log("----------Estudiante----------")
         let e = new Estudiante(
             new Nombre("Josue Benjamin", "Iglesias", "Alcaraz"),
             new FechaNacimiento(26, 4, 2001),
@@ -24,10 +25,19 @@ class Main {
     }
 
     testMaestro(){
-
+        console.log("----------Maestro----------")
+        let maestro1 = new Maestro(
+            new Nombre("Luis Alfonso", "Robles", "Robles"),
+            new FechaNacimiento(23, 5, 1990),
+            "masculino",
+            5000,
+            455038,
+            "Tiempo completo")
+        maestro1.print()
     }
     
     testGrupo(){
+        console.log("----------Grupo----------")
         let e1 = new Estudiante(
             new Nombre("Josue Benjamin", "Iglesias", "Alcaraz"),
             new FechaNacimiento(26, 4, 2001),
@@ -45,13 +55,12 @@ class Main {
             "Facultad de Ingeniería Civil")
 
         let e3 = new Estudiante(
-            new Nombre("AHORA SI EL JOSUE", "NAIN", "ulcuruz"),
+            new Nombre("Jusuu Benjamonki", "uglusuus", "ulcuruz"),
             new FechaNacimiento(4, 4, 2004),
             "masculino",
             444444,
             "4rp4@ucol.mx",
             "Facultad de Ingeniería Civil")
-
             
 
             let grupo = new Grupo(1, "G")
@@ -67,6 +76,7 @@ class Main {
     }
 
     testFechaNacimiento() {
+        console.log("----------Fecha de nacimiento----------")
         //lectura del atributo fecha
         console.log(this.fecha.getFecha())
 
@@ -87,4 +97,5 @@ class Main {
 let app = new Main
 app.testFechaNacimiento()
 app.testEstudiante()
+app.testMaestro()
 app.testGrupo()

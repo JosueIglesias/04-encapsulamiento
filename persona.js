@@ -12,6 +12,6 @@ export default class Persona {
     }
 
     getPerfil(){
-        return `${this._genero} ${this._fechaNacimiento.getFormatoCorto()} ${this._nombre.getNombreComplet()}`
+        return `${this._genero} ${this._fechaNacimiento.getFormatoCorto()} ${this._nombre.getCompleto()}`
     }
 }
