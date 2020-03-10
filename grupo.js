@@ -17,17 +17,64 @@ export default class Grupo{
         let result = null
 
         this._estudiantes.forEach(e => {
-            if(e === estudiante) {
+            if(e.esIgualA(estudiante)) {
                 result = e
             }
         })
 
         return result
     }
+
+    _encontrarEstudianteV2(estudiante) {
+        let result = this._estudiantes.find(e => e.esIgualA(estudiante))
+
+        return result
+    }
+
+    _eliminar(estudiante){
+        let indice = this._encontrarIndiceEstudiante(estudiante)
+
+        if (indice < 0) {
+            return false
+        }
+
+        this._estudiantes.splice(indice, 1)
+
+        return true
+    }
+
+    _actualizar(estudiante, nuevoEstudiante) {
+        let indice = this._encontrarIndiceEstudiante(estudiante)
+
+        if (indice < 0) {
+            return false
+        }
+
+        this._estudiantes.splice(indice, 1, nuevoEstudiante )
+        return true
+    }
     
     listarEstudiantes(){
         this._estudiantes.forEach((estudiante, i) => {
             console.log(`${i + 1} ${estudiante.getPerfil()}`)
         })
+    }
+
+    _encontrarIndiceEstudianteV2(estudiante) {
+        let indice = this._estudiantes.findIndex(e => e.esIgualA(estudiante))
+
+        return indice
+    }
+
+    _encontrarIndiceEstudiante(estudiante) {
+        let indice = -1
+
+        this._estudiantes.forEach((e, i) => {
+            if(e.esIgualA(estudiante)) {
+                indice = i 
+            }
+        })
+
+        return indice
     }
 }

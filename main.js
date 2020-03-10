@@ -38,13 +38,15 @@ class Main {
     
     testGrupo(){
         console.log("----------Grupo----------")
-        let e1 = new Estudiante(
+        let e1 = new Estudiante(datosEstudiante)
+
+        /*let e1 = new Estudiante(
             new Nombre("Josue Benjamin", "Iglesias", "Alcaraz"),
             new FechaNacimiento(26, 4, 2001),
             "masculino",
             20166483,
             "jiglesias3@ucol.mx",
-            "Facultad de Telemática")
+            "Facultad de Telemática")*/
 
         let e2 = new Estudiante(
             new Nombre("Jusuu Benjamonki", "uglusuus", "ulcuruz"),
@@ -54,14 +56,24 @@ class Main {
             "4rp4@ucol.mx",
             "Facultad de Ingeniería Civil")
 
-        let e3 = new Estudiante(
-            new Nombre("Jusuu Benjamonki", "uglusuus", "ulcuruz"),
+        let datosEstudiante = {
+            nombre: new Nombre("Mai", "zarate", "coloso"),
+            fechaNacimiento: new FechaNacimiento(30, 3,1996),
+            genero: "masculino",
+            numeroCuenta: 20139535,
+            correo:"mzarate1@ucol.mx",
+            escuela: "facultad de enfermeria"
+        }
+
+        let e3 = new Estudiante(datosEstudiante)
+            
+        let e4 = new Estudiante(
+            new Nombre("Jusuu el josue ", "cattedrales", "olcorosco"),
             new FechaNacimiento(4, 4, 2004),
             "masculino",
-            444444,
+            123456,
             "4rp4@ucol.mx",
             "Facultad de Ingeniería Civil")
-            
 
             let grupo = new Grupo(1, "G")
             console.log(grupo.registrar(e1))
@@ -73,6 +85,25 @@ class Main {
             grupo.listarEstudiantes()
             console.log(grupo._encontrarEstudiante(e1))
             console.log(grupo._encontrarEstudiante(e2))
+            console.log(grupo._encontrarEstudiante(e4))
+
+
+
+            console.log(grupo._encontrarIndiceEstudiante(e1))
+            console.log(grupo._encontrarIndiceEstudiante(e2))
+            console.log(grupo._encontrarIndiceEstudiante(e4))
+
+            console.log(grupo._encontrarIndiceEstudianteV2(e1))
+            console.log(grupo._encontrarIndiceEstudianteV2(e2))
+            console.log(grupo._encontrarIndiceEstudianteV2(e4))
+
+            console.log(grupo._eliminar(e2))
+            console.log(grupo._eliminar(e4))
+            grupo.listarEstudiantes()
+            
+            console.log(grupo._actualizar(e1 , e4))
+            grupo.listarEstudiantes()
+
     }
 
     testFechaNacimiento() {
